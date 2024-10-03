@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>HomePage</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20241003142904">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;700&display=swap&_v=20241003142904" rel="stylesheet">
+	<style>
+		:root {
+			--font-family-main: "Fira Sans", sans-serif;
+			--font-family-title: "Fira Sans", sans-serif;
+			--color-accent: #07984a;
+			--color-additional: #686868;
+			--color-background: #efefef;
+
+			/* Размер логотипа */
+			--width-logo: 240px;
+			--height-logo: 60px;
+
+			/* Переменные шапки */
+			--color-header-top-background: #f8f8f8;
+			--color-header-menu-border: #e8e8e8;
+			--color-header-menu-link: #9C9C9C;
+			--color-header-menu-link-active: #000;
+			--color-header-menu-link-hover: #07984a;
+			--color-header-info-icon: #07984a;
+			--color-header-info-title: #9c9c9c;
+			--color-header-info-link: #31353A;
+			--fontSize-header-info-title: clamp(13px, 1.12vw, 14px);
+			--color-header-phone-icon: #07984a;
+			--gap-header-menu-list: 40px;
+
+			/* Переменные мобильного меню */
+			--color-mobileInfo-title: #9C9C9C;
+			--color-mobileInfo-link: #31353A;
+			--fontSize-menu-link: 18px;
+
+			/* Кнопка выбора языков */
+			--color-selectLanguages-background: #fff;
+			--color-selectLanguages-background-hover: #F8F8F8;
+			--color-selectLanguages-border: #e8e8e8;
+			--color-selectLanguages: #9E9E9E;
+			--color-selectLanguages-active: #07984a;
+			--color-selectLanguages-hover: #000;
+			--fontSize-selectLanguages: clamp(13px, 1.12vw, 14px);
+
+			/* Бургер кнопка меню */
+			--color-burger-background: #07984a;
+
+			/* CTA */
+			--color-cta-button: #045357;
+			--color-cta-shadow: #04535766;
+			--color-cta-icon: #ffffff;
+
+			/* Кнопки по умолчанию */
+			--color-button: #fff;
+			--background-button: #07984a;
+			--border-button: #07984a;
+
+			/* HERO SECTION */
+			--color-hero-title: #FFF;
+			--color-hero-subtitle: #FFF;
+			--fontSize-hero-title: clamp(28px, 4.96vw, 62px);
+			--fontSize-hero-subtitle: clamp(16px, 1.6vw, 20px);
+
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__top">
+				<div class="__container">
+					<div class="header__top-wrapper">
+						<div class="header__logo-placeholder _showOnMobile"></div>
+						<div class="header__menu menu">
+							<button type="button" class="menu__icon icon-menu">
+								<span></span>
+							</button>
+							<nav id="site-navigation" class="menu__body">
+								<!-- <?php wp_nav_menu_extended( array( 'theme_location' => 'menu-main', 'menu_id' => 'menu-main', 'menu_class' => 'menu__list', 'container' => false, ) ); ?> -->
+								<ul id="menu-main" class="menu__list">
+									<li class="menu__item current-menu-item">
+										<span class="menu__span">Главная</span>
+									</li>
+									<li class="menu__item">
+										<a href="" class="menu__link">О компании</a>
+									</li>
+									<li class="menu__item">
+										<a href="" class="menu__link">Каталог</a>
+									</li>
+									<li class="menu__item">
+										<a href="" class="menu__link">Услуги</a>
+									</li>
+									<li class="menu__item">
+										<a href="" class="menu__link">Новости</a>
+									</li>
+									<li class="menu__item">
+										<a href="" class="menu__link">Контакты</a>
+									</li>
+								</ul>
+								<div class="mobileInfo _showOnMobile">
+									<div class="mobileInfo__title">Наши контакты</div>
+									<div class="mobileInfo__wrapper">
+										<a href="tel:+48 88 081 19 19" class="mobileInfo__link">+48 88 081 19 19</a>
+										<div class="mobileInfo__separator">/</div>
+										<a href="mailto:email@demo-site.com" class="mobileInfo__link">email@demo-site.com</a>
+									</div>
+								</div>
+								<div class="mobileInfo _showOnMobile">
+									<div class="mobileInfo__title">Адрес главного офиса</div>
+									<div class="mobileInfo__wrapper">
+										<a href="#map" class="mobileInfo__link">Город, Улица, дом ХХХ</a>
+									</div>
+								</div>
+								<div class="mobileInfo _showOnMobile">
+									<div class="mobileInfo__wrapper">
+										<a href="" class="instagram" target="__blank">
+											<img src="img/icons/instagram.svg">
+										</a>
+										<a href="" class="youtube" target="__blank">
+											<svg width="40" height="40">
+												<use xlink:href="img/icons/social-media.svg#youtube"></use>
+											</svg>
+										</a>
+										<a href="" class="facebook" target="__blank">
+											<svg width="40" height="40">
+												<use xlink:href="img/icons/social-media.svg#facebook"></use>
+											</svg>
+										</a>
+										<a href="" class="telegram">
+											<svg width="40" height="40">
+												<use xlink:href="img/icons/messengers.svg#telegram"></use>
+											</svg>
+										</a>
+										<a href="" class="whatsapp">
+											<svg width="40" height="40">
+												<use xlink:href="img/icons/messengers.svg#whatsapp"></use>
+											</svg>
+										</a>
+										<a href="" class="viber">
+											<svg width="40" height="40">
+												<use xlink:href="img/icons/messengers.svg#viber"></use>
+											</svg>
+										</a>
+									</div>
+								</div>
+							</nav>
+						</div>
+						<div class="header__phone _showOnMobile">
+							<a href="tel:+48 88 081 19 19" class="header__phone-link">
+								<svg height="22" width="22" class="header__phone-image">
+									<use xlink:href="img/icons/icons.svg#phone"></use>
+								</svg>
+							</a>
+						</div>
+						<!-- <?php echo getLanguageSelection('_desktop'); ?> -->
+						<div class='selectLanguages'>
+							<div class='selectLanguages__inner'>
+								<a href='#' class='selectLanguages__item selectLanguages__item-en'>ENG</a>
+								<div class='selectLanguages__item selectLanguages__item-ru _active'>RU</div>
+								<a href='#' class='selectLanguages__item selectLanguages__item-uk'>UKR</a>
+								<a href='#' class='selectLanguages__item selectLanguages__item-pl'>PL</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header__bottom">
+				<div class="__container">
+					<div class="header__bottom-wrapper">
+						<div class="header__logo _mr-a" data-da=".header__logo-placeholder, 1079.98">
+							<img src="img/logos/logo.svg" class="header__logo-img" />
+						</div>
+						<div class="header__info">
+							<svg height="22" width="22" class="header__info-icon">
+								<use xlink:href="img/icons/icons.svg#phone"></use>
+							</svg>
+							<div class="header__info-title">Наши контакты</div>
+							<a href="tel:+48 88 081 19 19" class="header__info-link">+48 88 081 19 19</a>
+							<a href="tel:+48 88 088 19 19" class="header__info-link">+48 88 088 19 19</a>
+						</div>
+						<div class="header__info">
+							<svg height="22" width="20" class="header__info-icon">
+								<use xlink:href="img/icons/icons.svg#map"></use>
+							</svg>
+							<div class="header__info-title">Адрес главного офиса</div>
+							<a href="#map" class="header__info-link">Город, Улица, дом ХХХ</a>
+						</div>
+						<button class="header__cta btn" data-popup="ask-question" data-da="#site-navigation, 1079.98, 1">
+							Связаться с нами
+						</button>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="page">
+			<!--
+ hero__slide может иметь модификатор затемнения _darken
+-->
+			<section class="hero">
+				<div class="hero__slider swiper">
+					<div class="hero__wrapper swiper-wrapper">
+						<div class="hero__slide swiper-slide _darken">
+							<div class="hero__slide-wrapper">
+								<div class="hero__image-wrapper">
+									<img src="img/content/hero/1.webp" alt="Оставьте заявку и получите 20% скидку" class="hero__image">
+								</div>
+								<div class="hero__content">
+									<div class="hero__content-wrapper __container">
+										<div class="hero__content-inner">
+											<h1 class="hero__title">Оставьте заявку и получите 20% скидку</h1>
+											<div class="hero__subtitle">Мы гарантируем своевременное и качественное оказание услуг</div>
+											<div class="hero__cta">
+												<a href="/services/" class="btn">ВСЕ УСЛУГИ</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="hero__slide swiper-slide">
+							<div class="hero__slide-wrapper">
+								<div class="hero__image-wrapper">
+									<img src="img/content/hero/1.webp" alt="Оставьте заявку и получите 20% скидку" class="hero__image">
+								</div>
+								<div class="hero__content">
+									<div class="hero__content-wrapper __container">
+										<div class="hero__content-inner">
+											<h1 class="hero__title">Оставьте заявку и получите 20% скидку</h1>
+											<div class="hero__subtitle">Мы гарантируем своевременное и качественное оказание услуг</div>
+											<div class="hero__cta">
+												<a href="/services/" class="btn">ВСЕ УСЛУГИ</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<button type="button" class="swiper-button-prev"></button>
+					<button type="button" class="swiper-button-next"></button>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20241003142904"></script>
+</body>
+
+</html>
